@@ -49,10 +49,9 @@
     gap: 20px;
     @media (max-width: $tablet) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
+      row-gap: 60px;
     }
     @media (max-width: $mobile) {
-      column-gap: 20px;
       padding-top: toRem(60);
       padding-bottom: toRem(60);
     }

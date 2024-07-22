@@ -1249,7 +1249,7 @@ h6 {
   }
   .footer__mid {
     grid-template-columns: repeat(2,1fr);
-    gap: 40px
+    row-gap: 60px
   }
   .project {
     padding-top: 3.125rem;
@@ -1350,9 +1350,6 @@ h6 {
     letter-spacing: 0
   }
   .footer__mid {
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
     padding-top: 3.75rem;
     padding-bottom: 3.75rem
   }
