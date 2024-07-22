@@ -1,0 +1,83 @@
+// <RATING>
+// Сніппет (HTML): rating
+// Rating
+$starActive: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIiBmaWxsPScjZjQ5YjMxJz4KPCEtLSFGb250IEF3ZXNvbWUgRnJlZSA2LjYuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIENvcHlyaWdodCAyMDI0IEZvbnRpY29ucywgSW5jLi0tPgo8cGF0aCBkPSJNMjU5LjMgMTcuOEwxOTQgMTUwLjIgNDcuOSAxNzEuNWMtMjYuMiAzLjgtMzYuNyAzNi4xLTE3LjcgNTQuNmwxMDUuNyAxMDMtMjUgMTQ1LjVjLTQuNSAyNi4zIDIzLjIgNDYgNDYuNCAzMy43TDI4OCA0MzkuNmwxMzAuNyA2OC43YzIzLjIgMTIuMiA1MC45LTcuNCA0Ni40LTMzLjdsLTI1LTE0NS41IDEwNS43LTEwM2MxOS0xOC41IDguNS01MC44LTE3LjctNTQuNkwzODIgMTUwLjIgMzE2LjcgMTcuOGMtMTEuNy0yMy42LTQ1LjYtMjMuOS01Ny40IDB6Ii8+Cjwvc3ZnPg==";
+$star: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIiBmaWxsPScjZjQ5YjMxJz48cGF0aCBkPSJNNTI4LjEgMTcxLjVMMzgyIDE1MC4yIDMxNi43IDE3LjhjLTExLjctMjMuNi00NS42LTIzLjktNTcuNCAwTDE5NCAxNTAuMiA0Ny45IDE3MS41Yy0yNi4yIDMuOC0zNi43IDM2LjEtMTcuNyA1NC42bDEwNS43IDEwMy0yNSAxNDUuNWMtNC41IDI2LjMgMjMuMiA0NiA0Ni40IDMzLjdMMjg4IDQzOS42bDEzMC43IDY4LjdjMjMuMiAxMi4yIDUwLjktNy40IDQ2LjQtMzMuN2wtMjUtMTQ1LjUgMTA1LjctMTAzYzE5LTE4LjUgOC41LTUwLjgtMTcuNy01NC42ek0zODguNiAzMTIuM2wyMy43IDEzOC40TDI4OCAzODUuNGwtMTI0LjMgNjUuMyAyMy43LTEzOC40LTEwMC42LTk4IDEzOS0yMC4yIDYyLjItMTI2IDYyLjIgMTI2IDEzOSAyMC4yLTEwMC42IDk4eiIvPjwvc3ZnPg==";
+$starGap: toRem(1);
+$starWidth: toRem(14);
+$starHeight: toRem(13);
+
+.rating {
+  display: inline-block;
+  // .rating__items
+  &__items {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: $starGap;
+    [data-rating="set"] & {
+      @media (any-hover: hover) {
+        &:hover {
+          .rating__item {
+            background: url($starActive) 0 0 / $starWidth no-repeat;
+          }
+        }
+      }
+    }
+  }
+  // .rating__item
+  &__item {
+    flex: 0 0 $starWidth;
+    width: $starWidth;
+    height: $starHeight;
+    position: relative;
+    background: url($star) 0 0 / $starWidth no-repeat;
+    transition: all 0.3s;
+    &--active {
+      background: url($starActive) 0 0 / $starWidth no-repeat;
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: $starHeight;
+      background: url($starActive) 0 0 / $starWidth no-repeat;
+    }
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: $starGap;
+        transform: translateX(100%);
+        [data-rating="set"] & {
+          cursor: pointer;
+        }
+      }
+    }
+    [data-rating="set"] & {
+      @media (any-hover: hover) {
+        &:hover {
+          ~ .rating__item {
+            background: url($star) 0 0 / $starWidth no-repeat;
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  // .rating__input
+  &__input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: block;
+    [data-rating="set"] & {
+      cursor: pointer;
+    }
+  }
+}

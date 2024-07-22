@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"RemodelHub" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section id="hero" class="hero">
+          <div class="hero__container">
+            <div class="hero__text">
+              <h1 class="hero__title">Home Remodeling</h1>
+              <div class="hero__subtitle-border">MADE EASY</div>
+              <div class="hero__desc">
+                RemodelHub is a marketplace that connects homeowners looking to
+                start a project, and contractors that will help complete those
+                projects.
+              </div>
+            </div>
+            <div class="hero__form">
+              <div class="hero__form-row">
+                <select name="project" class="hero__form-select" id="project">
+                  <option
+                    value=""
+                    disabled="disabled"
+                    selected="selected"
+                    hidden=""
+                  >
+                    Select project type
+                  </option>
+                  <option value="/walk-in-showers">Walk-In Showers</option>
+                  <option value="/walk-in-tubs">Walk-In Tubs</option>
+                  <option value="/stairlifts">Stairlifts</option>
+                  <option value="/kitchen-remodeling">
+                    Kitchen Remodeling
+                  </option>
+                  <option value="/window-replacement">
+                    Window Replacement
+                  </option>
+                  <option value="/gutter-guards">Gutter Guards</option>
+                  <option value="/roofing">Roofing</option>
+                  <option value="/siding">Siding</option>
+                  <option value="/hvac">HVAC</option>
+                  <option value="/decks">Decks</option>
+                  <option value="/landscaping">
+                    Landscape Design&nbsp;&amp;&nbsp;Build
+                  </option>
+                  <option value="/basement-waterproofing">
+                    Basement Waterproofing
+                  </option>
+                  <option value="/flooring">Flooring</option>
+                  <option value="/heat-pumps">Heat Pumps</option>
+                  <option value="/electrical">Electrical</option>
+                  <option value="/home-warranty-comparison">
+                    Home Warranty
+                  </option>
+                  <option value="/kitchen-cabinet-refacing">
+                    Kitchen Cabinet Refacing
+                  </option>
+                  <option value="/bathroom-remodeling">
+                    Bathroom Remodeling
+                  </option>
+                  <option value="/exterior-door-replacement">
+                    Exterior Door Replacement
+                  </option>
+                </select>
+                <button class="button-red hero__form-button">
+                  Get a Quote
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="project" class="project">
+          <div class="project__container">
+            <div class="project__head">
+              <h2 class="main-title project__title">
+                Browse by
+                <span class="text-red semibold">Project</span>
+              </h2>
+              <a href="#" class="button-red project__button _icon-arrow-right"
+                >See all Projects
+              </a>
+            </div>
+            <div class="project__wrap">
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-roofing.png"
+                  alt="roofing"
+                  class="project__image"
+                />
+                <span class="project__text">Roofing</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-windows.png"
+                  alt="Windows"
+                  class="project__image"
+                />
+                <span class="project__text">Windows</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-solar.png"
+                  alt="Solar"
+                  class="project__image"
+                />
+                <span class="project__text">Solar</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-hvac.png"
+                  alt="HVAC"
+                  class="project__image"
+                />
+                <span class="project__text">HVAC</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-bathroom.png"
+                  alt="Bathroom"
+                  class="project__image"
+                />
+                <span class="project__text">Bathroom</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-kitchen.png"
+                  alt="Kitchen"
+                  class="project__image"
+                />
+                <span class="project__text">Kitchen</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-gutter.png"
+                  alt="Gutter"
+                  class="project__image"
+                />
+                <span class="project__text">Gutter</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-flooring.png"
+                  alt="Flooring"
+                  class="project__image"
+                />
+                <span class="project__text">Flooring</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-siding.png"
+                  alt="Siding"
+                  class="project__image"
+                />
+                <span class="project__text">Siding</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-tubs.png"
+                  alt="Walk-in Tubs"
+                  class="project__image"
+                />
+                <span class="project__text">Walk-in Tubs</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-plumbing.png"
+                  alt="Plumbing"
+                  class="project__image"
+                />
+                <span class="project__text">Plumbing</span>
+              </a>
+              <a href="#" class="project__item project__item-desktop">
+                <img
+                  src="@img/home/project-warranty.png"
+                  alt="Home, Warranty"
+                  class="project__image"
+                />
+                <span class="project__text">Home, Warranty</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="how-works" data-da=".page, 991.98, 4" class="how-works">
+          <div class="how-works__container">
+            <h2 class="main-title how-works__title">
+              How It <span class="text-red semibold">Works</span>
+            </h2>
+            <div class="how-works__desc">
+              Discover how easy it is to bring your home remodeling projects to
+              life with Remodel Hub. RemodelHub is here to turn your home
+              renovation vision into a reality.
+            </div>
+            <div class="how-works__wrap">
+              <div class="how-works__item">
+                <div class="how-works__circle">
+                  <div class="how-works__step">01</div>
+                  <img
+                    src="@img/home/how-works-1.png"
+                    class="how-works__image"
+                    alt="Image"
+                  />
+                </div>
+                <div class="how-works__subtitle">Request a Quote</div>
+                <div class="how-works__text">
+                  Begin by submitting a request for a quote. Provide details
+                  about your project.
+                </div>
+              </div>
+              <div class="how-works__item">
+                <div class="how-works__circle">
+                  <div class="how-works__step">02</div>
+                  <img
+                    src="@img/home/how-works-2.png"
+                    class="how-works__image"
+                    alt="Image"
+                  />
+                </div>
+                <div class="how-works__subtitle">Match with Experts</div>
+                <div class="how-works__text">
+                  Once you submit your request, our platform matches you with
+                  top-rated contractors in your area.
+                </div>
+              </div>
+              <div class="how-works__item">
+                <div class="how-works__circle">
+                  <div class="how-works__step">03</div>
+                  <img
+                    src="@img/home/how-works-3.png"
+                    class="how-works__image"
+                    alt="Image"
+                  />
+                </div>
+                <div class="how-works__subtitle">Start Your Project</div>
+                <div class="how-works__text">
+                  Select the contractor that best fits your needs & budget. Work
+                  with them to finalize project.
+                </div>
+              </div>
+              <img
+                src="@img/home/how-works-dots.png"
+                class="how-works__dots how-works__dots-fitst"
+                alt="Image"
+              />
+              <img
+                src="@img/home/how-works-dots.png"
+                class="how-works__dots how-works__dots-last"
+                alt="Image"
+              />
+            </div>
+          </div>
+        </section>
+        <section
+          id="inspirations"
+          data-da=".page, 991.98, 3"
+          class="inspirations"
+        >
+          <div class="inspirations__container">
+            <div class="project__head">
+              <h2 class="main-title project__title">
+                Inspiration & <span class="text-red semibold">Insights</span>
+              </h2>
+              <a href="#" class="button-red project__button _icon-arrow-right"
+                >See all articles
+              </a>
+            </div>
+            <div class="inspirations__wrap">
+              <a
+                href="#"
+                class="inspirations__card inspirations__card-small inspirations__card-small-first"
+              >
+                <img
+                  src="@img/home/inspiration-small-1.png"
+                  alt=""
+                  class="inspirations__image"
+                />
+                <div class="inspirations__text">
+                  <div class="inspirations__tag">Design Hacks</div>
+                  <div class="inspirations__subtitle">
+                    Clever Design Hacks to Re-model
+                  </div>
+                  <span class="inspirations__line"></span>
+                  <div class="inspirations__desc">
+                    Lorem ipsum dolor sit amet, consectetur
+                  </div>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="inspirations__card inspirations__card-small inspirations__card-small-second"
+              >
+                <img
+                  src="@img/home/inspiration-small-2.png"
+                  alt=""
+                  class="inspirations__image"
+                />
+                <div class="inspirations__text">
+                  <div class="inspirations__tag">Maintenance</div>
+                  <div class="inspirations__subtitle">
+                    Seasonal Maintenance Tips
+                  </div>
+                  <span class="inspirations__line"></span>
+                  <div class="inspirations__desc">
+                    Lorem ipsum dolor sit amet, consectetur
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="inspirations__card inspirations__card-big">
+                <img
+                  src="@img/home/inspiration-big-1.png"
+                  alt=""
+                  class="inspirations__image"
+                />
+                <div class="inspirations__text">
+                  <div class="inspirations__tag">Kitchen</div>
+                  <div class="inspirations__subtitle">
+                    Top Kitchen Design Ideas to Elevate Your Space
+                  </div>
+                  <span class="inspirations__line"></span>
+                  <div class="inspirations__desc">
+                    Lorem ipsum dolor sit amet, consectetur
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="statistics" class="statistics">
+          <div class="statistics__container">
+            <h2 class="main-title how-works__title">
+              Project
+              <span class="text-red semibold">Statistics</span>
+            </h2>
+            <div class="how-works__desc">
+              Discover how easy it is to bring your home remodeling projects to
+              life with Remodel Hub. RemodelHub is here to turn your home
+              renovation vision into a reality.
+            </div>
+            <div class="statistics__wrap">
+              <div class="statistics__item">
+                <div class="statistics__circle">
+                  <img src="@img/home/statistics-1.png" alt="Image" />
+                </div>
+                <div class="statistics__number">112,651</div>
+                <div class="statistics__subtitle">Project requests</div>
+              </div>
+              <div class="statistics__item">
+                <div class="statistics__circle">
+                  <img src="@img/home/statistics-2.png" alt="Image" />
+                </div>
+                <div class="statistics__number">28,162</div>
+                <div class="statistics__subtitle">Estimates given</div>
+              </div>
+              <div class="statistics__item">
+                <div class="statistics__circle">
+                  <img src="@img/home/statistics-3.png" alt="Image" />
+                </div>
+                <div class="statistics__number">13,259</div>
+                <div class="statistics__subtitle">Projects completed</div>
+              </div>
+              <div class="statistics__item">
+                <div class="statistics__circle">
+                  <img src="@img/home/statistics-4.png" alt="Image" />
+                </div>
+                <div class="statistics__number">4,693</div>
+                <div class="statistics__subtitle">Happy Customers</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="testimonials" class="testimonials">
+          <div class="testimonials__container">
+            <h2 class="main-title how-works__title">
+              What Our
+              <span class="text-red semibold">Clients Say</span>
+            </h2>
+            <div class="how-works__desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor in cididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis.
+            </div>
+            <div class="testimonials__wrap">
+              <div class="testimonials__card">
+                <img
+                  src="@img/home/testimonials-project-1.png"
+                  class="testimonials__picture"
+                  alt="Image"
+                />
+                <div class="testimonials__text">
+                  <div class="testimonials__subtitle">“ 100% Recommended ”</div>
+                  <div class="testimonials__desc">
+                    "Every element of our home was done with care and an
+                    attention to detail. Plus, the project came in close to
+                    budget and schedule. What more could we ask for?"
+                  </div>
+                  <div class="testimonials__info">
+                    <div class="testimonials__client">
+                      <img
+                        src="@img/home/testimonials-client-1.png"
+                        class="testimonials__client-photo"
+                        alt="Image"
+                      />
+                      <div class="testimonials__client-text">
+                        <div class="testimonials__client-name">
+                          Mark Willium.J
+                        </div>
+                        <div class="testimonials__client-info">
+                          <div
+                            data-rating=""
+                            data-rating-value="4"
+                            class="rating testimonials__client-stars"
+                          ></div>
+                          <div class="testimonials__client-rating">
+                            4.9 Ratings
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      src="@img/home/google-logo.png"
+                      class="testimonials__google"
+                      alt="Image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__card">
+                <img
+                  src="@img/home/testimonials-project-2.png"
+                  class="testimonials__picture"
+                  alt="Image"
+                />
+                <div class="testimonials__text">
+                  <div class="testimonials__subtitle">
+                    “ Very Smooth Process ”
+                  </div>
+                  <div class="testimonials__desc">
+                    "Very glad to have found RemodelHub. As first-time
+                    homeowners and first-time renovators, it gave us a peace of
+                    mind that we would not have otherwise.”
+                  </div>
+                  <div class="testimonials__info">
+                    <div class="testimonials__client">
+                      <img
+                        src="@img/home/testimonials-client-2.png"
+                        class="testimonials__client-photo"
+                        alt="Image"
+                      />
+                      <div class="testimonials__client-text">
+                        <div class="testimonials__client-name">Olive Ode</div>
+                        <div class="testimonials__client-info">
+                          <div
+                            data-rating=""
+                            data-rating-value="4"
+                            class="rating testimonials__client-stars"
+                          ></div>
+                          <div class="testimonials__client-rating">
+                            4.9 Ratings
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      src="@img/home/google-logo.png"
+                      class="testimonials__google"
+                      alt="Image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__card">
+                <img
+                  src="@img/home/testimonials-project-3.png"
+                  class="testimonials__picture"
+                  alt="Image"
+                />
+                <div class="testimonials__text">
+                  <div class="testimonials__subtitle">
+                    “ Beyond My Expectations ”
+                  </div>
+                  <div class="testimonials__desc">
+                    RemodelHub transformed my outdated kitchen into a modern
+                    masterpiece. The process was seamless, and the results were
+                    beyond my expectations."
+                  </div>
+                  <div class="testimonials__info">
+                    <div class="testimonials__client">
+                      <img
+                        src="@img/home/testimonials-client-3.png"
+                        class="testimonials__client-photo"
+                        alt="Image"
+                      />
+                      <div class="testimonials__client-text">
+                        <div class="testimonials__client-name">Jhonson Den</div>
+                        <div class="testimonials__client-info">
+                          <div
+                            data-rating=""
+                            data-rating-value="4"
+                            class="rating testimonials__client-stars"
+                          ></div>
+                          <div class="testimonials__client-rating">
+                            4.9 Ratings
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      src="@img/home/google-logo.png"
+                      class="testimonials__google"
+                      alt="Image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__card">
+                <img
+                  src="@img/home/testimonials-project-4.png"
+                  class="testimonials__picture"
+                  alt="Image"
+                />
+                <div class="testimonials__text">
+                  <div class="testimonials__subtitle">
+                    “ The Process was Seamless ”
+                  </div>
+                  <div class="testimonials__desc">
+                    Our bathroom renovation was completed on time and within
+                    budget. The attention to detail was outstanding. Our
+                    bathroom renovation was completed on time and within
+                    budget.”
+                  </div>
+                  <div class="testimonials__info">
+                    <div class="testimonials__client">
+                      <img
+                        src="@img/home/testimonials-client-4.png"
+                        class="testimonials__client-photo"
+                        alt="Image"
+                      />
+                      <div class="testimonials__client-text">
+                        <div class="testimonials__client-name">Mark Brown</div>
+                        <div class="testimonials__client-info">
+                          <div
+                            data-rating=""
+                            data-rating-value="4"
+                            class="rating testimonials__client-stars"
+                          ></div>
+                          <div class="testimonials__client-rating">
+                            4.9 Ratings
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      src="@img/home/google-logo.png"
+                      class="testimonials__google"
+                      alt="Image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

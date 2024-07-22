@@ -1,0 +1,703 @@
+//====================================================================================================
+.hero {
+  background: url("@img/home/hero-bg.png") 80% 50% / cover no-repeat;
+  padding-top: toRem(300);
+  padding-bottom: toRem(300);
+  @media (max-width: $mobile) {
+    background: url("@img/home/hero-bg.png") 30% 50% / cover no-repeat;
+    padding-top: toRem(200);
+  }
+  // .hero__container
+  &__container {
+  }
+  // .hero__text
+  &__text {
+  }
+  // .hero__title
+  &__title {
+    font-weight: 300;
+    line-height: math.div(104, 81);
+    @include adaptiveValue("font-size", 81, 38);
+  }
+  &__subtitle-border {
+    font-weight: 700;
+    color: $red;
+    position: relative;
+    line-height: math.div(101, 64);
+    margin-top: toRem(-14);
+    display: block;
+    letter-spacing: 7px;
+    @include adaptiveValue("font-size", 64, 30);
+    @include adaptiveValue("padding-left", 215, 120);
+    @media (max-width: $mobile) {
+      margin-top: toRem(-8);
+      letter-spacing: 2px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      height: 3px;
+      background: #000;
+      @include adaptiveValue("width", 190, 110);
+    }
+  }
+  // .hero__desc
+  &__desc {
+    font-size: toRem(21);
+    line-height: math.div(41, 21);
+    color: $gray;
+    max-width: 650px;
+    @media (max-width: $mobile) {
+      font-size: toRem(18);
+    }
+  }
+  // .hero__form
+  &__form {
+    margin-top: toRem(50);
+    max-width: 850px;
+  }
+
+  // .hero__form-row
+  &__form-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @media (max-width: $mobileSmall) {
+      gap: 8px;
+    }
+  }
+  // .hero__form-select
+  &__form-select {
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    line-height: math.div(40, 21);
+    font-size: toRem(21);
+    font-weight: 500;
+    padding: 26px 24px;
+    color: $mainColor;
+    outline: none;
+    appearance: none;
+    background-image: url("@img/home/arrow-down.svg");
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+    cursor: pointer;
+
+    @media (max-width: $mobile) {
+      padding: 16px 24px;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: toRem(18);
+      padding: 8px 16px;
+    }
+  }
+  // .hero__form-button
+  &__form-button {
+    flex-shrink: 0;
+    padding: 26px 58px;
+    font-size: toRem(21);
+    @media (max-width: $mobile) {
+      padding: 16px 24px;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: toRem(18);
+      padding: 8px 8px 8px 16px;
+    }
+  }
+}
+//========================================================================================================================================================
+
+.project {
+  padding-top: toRem(86);
+  padding-bottom: toRem(120);
+  @media (max-width: $tablet) {
+    padding-top: toRem(50);
+    padding-bottom: toRem(80);
+  }
+  // .project__container
+  &__container {
+  }
+  // .project__head
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  // .project__title
+  &__title {
+  }
+  // .project__button
+  &__button {
+  }
+  // .project__wrap
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 260px);
+    gap: 30px;
+    margin-top: toRem(100);
+
+    @media (max-width: toEm(1540.98)) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 240px);
+    }
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      margin-top: toRem(60);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: toRem(56);
+    }
+  }
+  // .project__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    &-desktop {
+      border: 1px solid #d7d7d7;
+      border-radius: 8px;
+      gap: 20px;
+      padding: 20px 20px 50px;
+      transition: border 0.3s;
+      @media (any-hover: hover) {
+        &:hover {
+          border: 1px solid $red;
+        }
+      }
+      @media (max-width: toEm(1540.98)) {
+        padding: 20px 16px 40px;
+      }
+      @media (max-width: $tablet) {
+        padding: 16px;
+      }
+    }
+  }
+  // .project__image
+  &__image {
+    width: auto;
+  }
+  // .project__text
+  &__text {
+    line-height: math.div(40, 24);
+    font-weight: 500;
+    @include adaptiveValue("font-size", 24, 14);
+  }
+}
+
+//========================================================================================================================================================
+
+.how-works {
+  background: $grayBg;
+  padding-top: toRem(84);
+  padding-bottom: toRem(160);
+  @media (max-width: $tablet) {
+    padding-top: toRem(60);
+    padding-bottom: toRem(100);
+    background: #fff;
+  }
+  // .how-works__container
+  &__container {
+  }
+  // .how-works__title
+  &__title {
+    text-align: center;
+    margin-bottom: toRem(18);
+  }
+  // .how-works__desc
+  &__desc {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: math.div(43, 23);
+    margin-bottom: toRem(60);
+    color: $gray;
+    @include adaptiveValue("font-size", 23, 16);
+    @media (max-width: $tablet) {
+      max-width: 600px;
+    }
+  }
+  // .how-works__wrap
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    @include adaptiveValue("gap", 190, 126, 0, $containerWidth, 991.98);
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 260px;
+    }
+    &::before {
+      content: "............";
+      position: absolute;
+      transform: translate(-50%, -50%);
+      font-family: "Montserrat";
+      font-weight: 900;
+      color: $red;
+      @include adaptiveValue("font-size", 71, 40, 2, $containerWidth, 991.98);
+      @include adaptiveValue("left", 532, 298, 2, $containerWidth, 991.98);
+      @include adaptiveValue("top", 158, 110, 2, $containerWidth, 991.98);
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+    &::after {
+      content: "............";
+      position: absolute;
+      transform: translate(-50%, -50%);
+      font-family: "Montserrat";
+      font-weight: 900;
+      color: $red;
+      @include adaptiveValue("font-size", 71, 40, 2, $containerWidth, 991.98);
+      @include adaptiveValue("right", 308, 170, 2, $containerWidth, 991.98);
+      @include adaptiveValue("top", 158, 110, 2, $containerWidth, 991.98);
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+  // .how-works__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  // .how-works__circle
+  &__circle {
+    width: toRem(324);
+    height: toRem(324);
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: toRem(44);
+    box-shadow: 0px 5px 45px 0px rgba(0, 0, 0, 0.05);
+
+    @include adaptiveValue("width", 324, 230, 1, $containerWidth, 991.98);
+    @include adaptiveValue("height", 324, 230, 1, $containerWidth, 991.98);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: toRem(281);
+      height: toRem(281);
+      border-radius: 50%;
+      border: 2px solid rgba(219, 219, 219, 0.5);
+      z-index: 1;
+      @include adaptiveValue("width", 281, 200, 1, $containerWidth, 991.98);
+      @include adaptiveValue("height", 281, 200, 1, $containerWidth, 991.98);
+    }
+  }
+  // .how-works__step
+  &__step {
+    position: absolute;
+    top: 30px;
+    right: 46px;
+    font-size: toRem(22);
+    line-height: math.div(31, 22);
+    width: toRem(58);
+    height: toRem(58);
+    background: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 600;
+    z-index: 2;
+    @include adaptiveValue("width", 58, 45, 1, $containerWidth, 991.98);
+    @include adaptiveValue("height", 58, 45, 1, $containerWidth, 991.98);
+    @include adaptiveValue("top", 30, 20, 1, $containerWidth, 991.98);
+    @include adaptiveValue("right", 46, 25, 1, $containerWidth, 991.98);
+  }
+  // .how-works__image
+  &__image {
+    @include adaptiveValue("max-width", 138, 110, 1, $containerWidth, 991.98);
+  }
+  // .how-works__subtitle
+  &__subtitle {
+    font-size: toRem(35);
+    line-height: math.div(41, 34);
+    font-weight: 500;
+    margin-bottom: toRem(14);
+  }
+  // .how-works__text
+  &__text {
+    font-size: toRem(17);
+    line-height: math.div(31, 17);
+    color: $gray;
+    max-width: 430px;
+  }
+  // .how-works__dots
+  &__dots {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+  // .how-works__dots-fitst
+  &__dots-fitst {
+    top: 25%;
+  }
+  // .how-works__dots-last
+  &__dots-last {
+    bottom: 26%;
+  }
+}
+//========================================================================================================================================================
+
+.inspirations {
+  padding-top: toRem(100);
+  padding-bottom: toRem(150);
+  @media (max-width: $tablet) {
+    padding-top: toRem(50);
+    padding-bottom: toRem(80);
+    background: $grayBg;
+  }
+  // .inspirations__container
+  &__container {
+  }
+  // .inspirations__wrap
+  &__wrap {
+    margin-top: toRem(80);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 45px;
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 450px);
+      margin-top: toRem(60);
+      gap: 20px;
+    }
+    @media (max-width: $mobile) {
+      grid-template-rows: repeat(3, 350px);
+    }
+  }
+  // .inspirations__card
+  &__card {
+    box-shadow: 0px 5px 45px 0px rgba(0, 0, 0, 0.03);
+    border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    background: #fff;
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0px 5px 45px 0px rgba(0, 0, 0, 0.2);
+      }
+    }
+    &-small {
+      display: flex;
+      align-items: center;
+      .inspirations__image {
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+        @include adaptiveValue("width", 546, 232, 0, $containerWidth, 991.98);
+        @media (max-width: $tablet) {
+          width: 50%;
+        }
+      }
+      .inspirations__text {
+        width: 100%;
+        @media (max-width: $tablet) {
+          justify-content: center;
+        }
+      }
+
+      &-first {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      &-second {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+    }
+    &-big {
+      grid-area: 1 / 2 / 3 / 3;
+      display: flex;
+      flex-direction: column;
+      .inspirations__image {
+        width: 100%;
+        @media (max-width: $tablet) {
+          height: 60%;
+          object-fit: cover;
+        }
+      }
+      .inspirations__text {
+        width: 100%;
+        justify-content: center;
+        @media (max-width: $tablet) {
+          height: 40%;
+        }
+      }
+      @media (max-width: $tablet) {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+    }
+  }
+  // .inspirations__image
+  &__image {
+    border-radius: 7px;
+  }
+  // .inspirations__text
+  &__text {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  // .inspirations__tag
+  &__tag {
+    color: $red;
+    font-size: toRem(21);
+    line-height: 120%;
+    margin-bottom: toRem(20);
+    @include adaptiveValue("font-size", 21, 14);
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(8);
+    }
+  }
+  // .inspirations__subtitle
+  &__subtitle {
+    font-size: toRem(31);
+    line-height: math.div(43, 31);
+    margin-bottom: toRem(20);
+    @include adaptiveValue("font-size", 31, 18);
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(8);
+    }
+  }
+  &__line {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.2;
+    min-height: 2px;
+    width: 126px;
+    margin: 0 auto toRem(20);
+    @media (max-width: $mobile) {
+      margin: 0 auto toRem(8);
+    }
+  }
+  // .inspirations__desc
+  &__desc {
+    font-size: toRem(21);
+    line-height: math.div(31, 21);
+    color: $gray;
+    margin-bottom: toRem(20);
+    @include adaptiveValue("font-size", 20, 14);
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(0);
+    }
+  }
+}
+//========================================================================================================================================================
+
+.statistics {
+  background: $grayBg;
+  padding-top: toRem(58);
+  padding-bottom: toRem(100);
+  // .statistics__container
+  &__container {
+  }
+  // .statistics__wrap
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 80px;
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 80px;
+    }
+  }
+  // .statistics__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  // .statistics__circle
+  &__circle {
+    border-radius: 50%;
+    background: #fff;
+    width: toRem(105);
+    height: toRem(105);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: toRem(28);
+  }
+  // .statistics__number
+  &__number {
+    font-size: toRem(75);
+    line-height: math.div(80, 75);
+    @include adaptiveValue("font-size", 75, 50, 1, $containerWidth, 991.98);
+  }
+  // .statistics__subtitle
+  &__subtitle {
+    font-size: toRem(22);
+    line-height: math.div(30, 22);
+    color: $gray;
+    text-transform: uppercase;
+    margin-top: toRem(36);
+    padding-top: toRem(40);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    @include adaptiveValue("font-size", 22, 18, 1, $containerWidth, 991.98);
+  }
+}
+
+//========================================================================================================================================================
+
+.testimonials {
+  padding-top: toRem(76);
+  padding-bottom: toRem(110);
+  // .testimonials__container
+  &__container {
+  }
+  // .testimonials__wrap
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: toRem(76);
+    gap: 30px;
+    @media (max-width: toEm(1440.98)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: toRem(40);
+    }
+  }
+  // .testimonials__card
+  &__card {
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  // .testimonials__picture
+  &__picture {
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    @include adaptiveValue("height", 350, 200, 0, $containerWidth, 1440.98);
+
+    @media (max-width: toEm(1440.98)) {
+      height: toRem(300);
+    }
+  }
+  // .testimonials__text
+  &__text {
+    border: 2px solid #f2f2f2;
+    border-top: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 30px 16px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  // .testimonials__subtitle
+  &__subtitle {
+    font-size: toRem(23);
+    line-height: math.div(30, 23);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: toRem(12);
+    @media (max-width: $mobile) {
+      font-size: toRem(20);
+    }
+  }
+  // .testimonials__desc
+  &__desc {
+    font-size: toRem(17);
+    line-height: math.div(33, 17);
+    color: $gray;
+    text-align: center;
+    flex-grow: 1;
+    @media (max-width: $mobile) {
+      font-size: toRem(16);
+    }
+  }
+  // .testimonials__info
+  &__info {
+    margin-top: toRem(30);
+    padding-top: toRem(17);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(30, 36, 72, 0.08);
+  }
+  // .testimonials__client
+  &__client {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  // .testimonials__client-photo
+  &__client-photo {
+    border-radius: 50%;
+    width: toRem(64);
+    height: toRem(64);
+    object-fit: none;
+    object-position: top;
+  }
+  // .testimonials__client-text
+  &__client-text {
+  }
+  // .testimonials__client-name
+  &__client-name {
+    font-size: toRem(21);
+    line-height: math.div(24, 21);
+    font-weight: 500;
+  }
+  // .testimonials__client-info
+  &__client-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  // .testimonials__client-stars
+  &__client-stars {
+  }
+  // .testimonials__client-rating
+  &__client-rating {
+    font-size: toRem(13);
+    color: $gray;
+    margin-top: toRem(8);
+  }
+  // .testimonials__google
+  &__google {
+    max-width: 40px;
+  }
+}

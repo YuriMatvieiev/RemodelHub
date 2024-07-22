@@ -1,0 +1,37 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.button-red {
+  background: $red;
+  border-radius: 7px;
+  line-height: math.div(40, 21);
+  font-weight: 500;
+  color: #fff;
+  padding: 16px 26px;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 14px;
+  @include adaptiveValue("font-size", 24, 16);
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(209, 6, 9);
+    }
+  }
+  @include adaptiveValue("padding-left", 26, 8, 0, $containerWidth, 991.98);
+  @include adaptiveValue("padding-right", 26, 8, 0, $containerWidth, 991.98);
+  @media (max-width: $tablet) {
+    padding: 16px 20px;
+  }
+}
+
+.text-red {
+  color: $red;
+}
+.semibold {
+  font-weight: 600;
+}
+.main-title {
+  line-height: math.div(84, 65);
+  font-weight: 300;
+  @include adaptiveValue("font-size", 65, 32);
+}

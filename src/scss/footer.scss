@@ -1,0 +1,243 @@
+//====================================================================================================
+.footer {
+  background: $grayBg;
+  padding-top: toRem(76);
+  padding-bottom: toRem(50);
+  @media (max-width: $tablet) {
+  }
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    margin-bottom: toRem(64);
+  }
+  // .footer__logo
+  &__logo {
+    max-width: toRem(560);
+    margin: 0 auto 40px;
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+  // .footer__desc
+  &__desc {
+    text-align: center;
+    max-width: toRem(1440);
+    margin: 0 auto;
+    font-size: toRem(27);
+    line-height: math.div(52, 27);
+    letter-spacing: 0.2px;
+    color: $gray;
+    @media (max-width: $tablet) {
+      font-size: toRem(20);
+    }
+    @media (max-width: $mobile) {
+      font-size: toRem(16);
+      letter-spacing: 0;
+    }
+  }
+  // .footer__mid
+  &__mid {
+    padding-top: toRem(90);
+    padding-bottom: toRem(90);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.9fr 1.6fr;
+    gap: 20px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    @media (max-width: $mobile) {
+      column-gap: 20px;
+      padding-top: toRem(60);
+      padding-bottom: toRem(60);
+    }
+  }
+  // .footer__col
+  &__col {
+    @media (max-width: $mobile) {
+      &-3 {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+      &-4 {
+        grid-area: 3 / 1 / 4 / 3;
+      }
+    }
+  }
+  // .footer__title
+  &__title {
+    font-size: toRem(35);
+
+    line-height: math.div(40, 35);
+    font-weight: 500;
+    margin-bottom: toRem(90);
+    position: relative;
+    @include adaptiveValue("font-size", 35, 20, 1, $containerWidth, 991.98);
+    @media (max-width: $mobile) {
+      font-size: toRem(24);
+      margin-bottom: toRem(50);
+    }
+    &::before {
+      content: "";
+      background: $red;
+      height: 6px;
+      width: toRem(100);
+      opacity: 0.5;
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      background: $red;
+      height: 6px;
+      width: toRem(60);
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+      z-index: 2;
+    }
+  }
+  // .footer__nav
+  &__nav {
+    li {
+      font-size: toRem(24);
+      line-height: math.div(36, 24);
+      color: $gray;
+      @include adaptiveValue("font-size", 24, 18, 1, $containerWidth, 991.98);
+      @media (max-width: $mobile) {
+        font-size: toRem(20);
+      }
+      &:not(:last-child) {
+        margin-bottom: toRem(20);
+      }
+      a {
+        transition: color 0.3s;
+        @media (any-hover: hover) {
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+    }
+    &-contact {
+      li {
+        font-size: toRem(26);
+        display: flex;
+        gap: 20px;
+        @include adaptiveValue("font-size", 26, 18, 1, $containerWidth, 991.98);
+        @media (max-width: $mobile) {
+          font-size: toRem(20);
+        }
+        &::before {
+          font-size: toRem(30);
+          flex-shrink: 0;
+          width: 30px;
+          display: flex;
+          justify-content: center;
+          color: $red;
+        }
+      }
+    }
+  }
+  // .footer__form-subscribe
+  &__form-subscribe {
+    position: relative;
+    margin-bottom: toRem(40);
+    label {
+      position: absolute;
+      left: 8px;
+      top: 45px;
+      transform: translateY(-50%);
+      color: $gray;
+
+      line-height: math.div(30, 24);
+      transition: all 0.3s;
+      @include adaptiveValue("font-size", 35, 20, 1, $containerWidth, 991.98);
+      &::placeholder {
+        color: transparent;
+        opacity: 0;
+      }
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      transform: translateY(-50%);
+      color: $red;
+      font-size: toRem(34);
+      height: 100%;
+      width: toRem(40);
+    }
+    input {
+      //   background: #fff;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 30px 40px 20px 8px;
+      font-size: toRem(24);
+      line-height: math.div(30, 24);
+      outline: none;
+      transition: border 0.3s;
+      &:focus,
+      &:not(:placeholder-shown) {
+        border-bottom: 1px solid $red;
+        ~ label {
+          top: 15px;
+          font-size: toRem(18);
+          color: #000;
+        }
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    align-items: center;
+    li {
+      a {
+        width: toRem(71);
+        height: toRem(71);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: toRem(32);
+        transition: all 0.3s;
+        cursor: pointer;
+        @media (max-width: $pc) {
+          width: toRem(60);
+          height: toRem(60);
+        }
+        @media (any-hover: hover) {
+          &:hover {
+            background: $red;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    padding-top: toRem(50);
+  }
+  // .footer__copy
+  &__copy {
+    font-size: toRem(27);
+    line-height: math.div(30, 27);
+    text-align: center;
+    color: $gray;
+    @media (max-width: $mobile) {
+      font-size: toRem(22);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: toRem(18);
+    }
+  }
+}
+
+//====================================================================================================

@@ -1,0 +1,147 @@
+.header {
+  padding-top: toRem(38);
+  padding-bottom: toRem(38);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 20;
+    @include adaptiveValue("max-width", 355, 180, 0, $containerWidth, 991.98);
+    @media (max-width: $mobile) {
+      max-width: 240px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  // .header__menu
+  &__menu {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 110, 20, 0, $containerWidth, 991.98);
+    @media (max-width: $tablet) {
+      gap: 60px;
+    }
+  }
+  // .header__controls
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    z-index: 20;
+    @media (max-width: $mobile) {
+      justify-content: center;
+      flex-direction: column;
+      margin-top: toRem(40);
+    }
+  }
+  // .header__login
+  &__login {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    line-height: math.div(40, 21);
+    font-weight: 500;
+    border-radius: 7px;
+    padding: 14px 24px;
+    border: 1px solid transparent;
+    transition: border 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        border: 1px solid $red;
+      }
+    }
+    @media (max-width: $mobile) {
+      border: 1px solid $red;
+    }
+    @include adaptiveValue("font-size", 21, 18, 0, $containerWidth, 991.98);
+    @include adaptiveValue("padding-left", 25, 13, 0, $containerWidth, 991.98);
+    @include adaptiveValue("padding-right", 25, 13, 0, $containerWidth, 991.98);
+    @media (max-width: $pc) {
+      padding: 14px 18px;
+    }
+    @media (max-width: $mobile) {
+      font-size: toRem(22);
+    }
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+      justify-content: center;
+    }
+    &::before {
+      color: $red;
+      @media (max-width: toEm(1440.98)) {
+        display: none;
+      }
+      @media (max-width: $tablet) {
+        display: block;
+      }
+    }
+  }
+  &__join {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 14px;
+    @include adaptiveValue("font-size", 21, 18, 0, $containerWidth, 991.98);
+
+    @media (max-width: $mobile) {
+      font-size: toRem(22);
+    }
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+      justify-content: center;
+    }
+    &::before {
+      @media (max-width: toEm(1440.98)) {
+        display: none;
+      }
+      @media (max-width: $tablet) {
+        display: block;
+      }
+    }
+  }
+}
+.menu {
+  // .menu__body
+  &__body {
+  }
+  // .menu__list
+  &__list {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 48, 10, 0, $containerWidth, 991.98);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    line-height: math.div(40, 21);
+    padding: 4px 6px;
+    transition: color 0.3s;
+    @include adaptiveValue("font-size", 21, 18, 0, $containerWidth, 991.98);
+    @media (max-width: $mobile) {
+      font-size: toRem(22);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
