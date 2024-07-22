@@ -503,7 +503,8 @@ h6 {
   font-size: 1.5rem;
   line-height: 1.25;
   outline: 0;
-  transition: border .3s
+  transition: border .3s;
+  border-radius: 0
 }
 .footer__form-subscribe input:not(:-ms-input-placeholder) {
   border-bottom: 1px solid #de3537
@@ -546,6 +547,19 @@ h6 {
   line-height: 1.1111111111;
   text-align: center;
   color: rgba(0,0,0,.7)
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 1000px #f0f0f0 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s
 }
 .hero {
   background: url(../img/home/hero-bg.webp) 80% 50%/cover no-repeat;
