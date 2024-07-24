@@ -14,6 +14,15 @@
   }
 }
 
+._icon-check-double:before {
+  content: "\e900";
+}
+._icon-star:before {
+  content: "\f005";
+}
+._icon-star-o:before {
+  content: "\f006";
+}
 ._icon-map-marker:before {
   content: "\f041";
 }
@@ -24,9 +33,6 @@
   content: "\f095";
 }
 ._icon-facebook:before {
-  content: "\f09a";
-}
-._icon-facebook-f:before {
   content: "\f09a";
 }
 ._icon-briefcase:before {
@@ -47,14 +53,11 @@
 ._icon-angle-down:before {
   content: "\f107";
 }
-._icon-youtube-play:before {
+._icon-youtube:before {
   content: "\f16a";
 }
 ._icon-instagram:before {
   content: "\f16d";
-}
-._icon-paper-plane:before {
-  content: "\f1d8";
 }
 ._icon-send:before {
   content: "\f1d8";

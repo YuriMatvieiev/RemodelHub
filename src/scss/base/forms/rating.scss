@@ -81,3 +81,31 @@ $starHeight: toRem(13);
     }
   }
 }
+
+@mixin starDimensions($width, $height, $gap) {
+  $starWidth: $width;
+  $starHeight: $height;
+  $starGap: $gap;
+
+  .rating {
+    &__item {
+      flex: 0 0 $starWidth;
+      width: $starWidth;
+      height: $starHeight;
+      background: url($starActive) 0 0 / $starWidth no-repeat;
+
+      span {
+        height: $starHeight;
+        background: url($starActive) 0 0 / $starWidth no-repeat;
+      }
+    }
+  }
+}
+
+// Default size for rating
+@include starDimensions(toRem(14), toRem(13), toRem(1));
+
+// Specific block 2 with another set of star dimensions
+.clients-say {
+  @include starDimensions(toRem(25), toRem(22), toRem(2));
+}

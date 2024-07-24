@@ -14,7 +14,7 @@
   @include adaptiveValue("font-size", 24, 16);
   @media (any-hover: hover) {
     &:hover {
-      background: rgb(209, 6, 9);
+      background: $redDark;
     }
   }
   @include adaptiveValue("padding-left", 26, 8, 0, $containerWidth, 991.98);
@@ -34,4 +34,35 @@
   line-height: math.div(84, 65);
   font-weight: 300;
   @include adaptiveValue("font-size", 65, 32);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #f0f0f0 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.rounded-button {
+  font-size: toRem(20);
+  line-height: math.div(30, 20);
+  background: $red;
+  border-radius: 33px;
+  padding: 20px 40px;
+  color: #fff;
+  transition: background 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $redDark;
+    }
+  }
+  @media (max-width: $mobile) {
+    font-size: toRem(18);
+  }
 }

@@ -69,7 +69,7 @@
 		"postcss-preset-env": "latest",
 		"pug": "latest",
 		"pug-loader": "latest",
-		"sass": "latest",
+		"sass": "1.77.6",
 		"sass-loader": "latest",
 		"smooth-scroll": "latest",
 		"string-replace-loader": "latest",
