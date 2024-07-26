@@ -33,6 +33,8 @@
   &__container {
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
   }
   // .hero__text
   &__text {
@@ -757,6 +759,9 @@
     padding-top: toRem(310);
     padding-bottom: toRem(370);
     text-align: center;
+    &__container {
+      align-items: center;
+    }
     @media (max-width: $mobile) {
       padding-top: toRem(200);
       padding-bottom: toRem(300);
@@ -775,7 +780,6 @@
       @include adaptiveValue("font-size", 60, 38);
     }
     .hero__desc {
-      margin: 0 auto;
       max-width: toRem(780);
     }
     .hero__form {
@@ -1423,7 +1427,7 @@
   }
   // .renovation__title
   &__title {
-    max-width: 650px;
+    max-width: 750px;
     margin-bottom: toRem(20);
   }
   // .renovation__desc
@@ -1431,14 +1435,12 @@
     font-size: toRem(22);
     line-height: math.div(35, 22);
     color: $gray;
-    max-width: 700px;
     margin-bottom: toRem(74);
   }
   // .renovation__wrap
   &__wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: toRem(44);
     position: relative;
     @include adaptiveValue("gap", 150, 40, 0, $containerWidth, 991.98);
     @media (max-width: $tablet) {
@@ -1497,6 +1499,7 @@
   }
   // .renovation__button
   &__button {
+    margin-top: toRem(44);
   }
   &__arrow-first {
     position: absolute;
@@ -1807,5 +1810,512 @@
     margin-top: toRem(40);
     max-width: 850px;
     width: 100%;
+  }
+}
+
+//========================================================================================================================================================
+// Constructor page
+//========================================================================================================================================================
+
+.constructor-page {
+  .hero {
+    padding-top: toRem(220);
+    padding-bottom: toRem(480);
+    text-align: center;
+    &__container {
+      align-items: center;
+    }
+    @media (max-width: $mobile) {
+      padding-top: toRem(200);
+      padding-bottom: toRem(300);
+    }
+    @media (max-width: $mobileSmall) {
+      padding-bottom: toRem(200);
+    }
+
+    .hero__bg {
+      object-fit: cover;
+      object-position: 50% 44%;
+      @media (max-width: $mobile) {
+        object-position: 40% 50%;
+      }
+    }
+
+    .hero__desc {
+      max-width: toRem(980);
+      margin-bottom: toRem(20);
+    }
+  }
+  .call-action {
+    background: #ebebeb;
+    .hero__form-button {
+      margin-top: toRem(20);
+    }
+  }
+  .call-action__bg {
+    object-position: center 75%;
+  }
+}
+
+//========================================================================================================================================================
+
+.benefits-contractor {
+  padding-top: toRem(110);
+  padding-bottom: toRem(134);
+  @media (max-width: $mobile) {
+    padding-top: toRem(80);
+    padding-bottom: toRem(100);
+  }
+  // .benefits-contractor__container
+  &__container {
+  }
+  // .benefits-contractor__title
+  &__title {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 10px;
+  }
+  // .benefits-contractor__desc
+  &__desc {
+    text-align: center;
+    font-size: toRem(20);
+    line-height: math.div(24, 20);
+    color: $gray;
+  }
+  // .benefits-contractor__wrap
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    margin: 80px auto 0;
+    max-width: toRem(1500);
+    row-gap: 24px;
+    @include adaptiveValue("column-gap", 130, 24, 0, $containerWidth, 991.98);
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 40px auto 0;
+    }
+  }
+  // .benefits-contractor__circle
+  &__circle {
+    border-radius: 50%;
+    background-color: rgba(225, 54, 51, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    @include adaptiveValue("width", 360, 230, 0, $containerWidth, 991.98);
+    @include adaptiveValue("height", 360, 230, 0, $containerWidth, 991.98);
+    @media (max-width: $tablet) {
+      display: none;
+    }
+    &::before {
+      content: "";
+
+      background-color: rgba(225, 54, 51, 0.1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: 2;
+      @include adaptiveValue("width", 315, 200, 0, $containerWidth, 991.98);
+      @include adaptiveValue("height", 315, 200, 0, $containerWidth, 991.98);
+    }
+    &::after {
+      content: "";
+
+      background-color: rgba(225, 54, 51, 0.1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: 3;
+      @include adaptiveValue("width", 262, 170, 0, $containerWidth, 991.98);
+      @include adaptiveValue("height", 262, 170, 0, $containerWidth, 991.98);
+    }
+    &-small {
+      background-color: $red;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 4;
+      @include adaptiveValue("width", 186, 140, 0, $containerWidth, 991.98);
+      @include adaptiveValue("height", 186, 140, 0, $containerWidth, 991.98);
+    }
+  }
+  // .benefits-contractor__logo
+  &__logo {
+    @include adaptiveValue("max-width", 84, 70, 0, $containerWidth, 991.98);
+  }
+  // .benefits-contractor__card
+  &__card {
+    background: #fff;
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    padding-top: toRem(34);
+    padding-bottom: toRem(40);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &:nth-child(even) {
+      @include adaptiveValue(
+        "padding-left",
+        66,
+        24,
+        0,
+        $containerWidth,
+        991.98
+      );
+      @include adaptiveValue(
+        "padding-right",
+        130,
+        80,
+        0,
+        $containerWidth,
+        991.98
+      );
+      @media (max-width: $tablet) {
+        padding-left: toRem(24);
+        padding-right: toRem(24);
+      }
+    }
+    &:nth-child(odd) {
+      @include adaptiveValue(
+        "padding-left",
+        140,
+        80,
+        0,
+        $containerWidth,
+        991.98
+      );
+      @include adaptiveValue(
+        "padding-right",
+        70,
+        24,
+        0,
+        $containerWidth,
+        991.98
+      );
+      @media (max-width: $tablet) {
+        padding-left: toRem(24);
+        padding-right: toRem(24);
+      }
+    }
+  }
+  // .benefits-contractor__icon
+  &__icon {
+    max-width: toRem(78);
+    width: 100%;
+    @media (max-width: $mobile) {
+      max-width: toRem(50);
+    }
+  }
+  // .benefits-contractor__subtitle
+  &__subtitle {
+    line-height: math.div(40, 34);
+    font-weight: 500;
+    margin-top: toRem(34);
+    letter-spacing: -1px;
+    margin-bottom: toRem(10);
+    @include adaptiveValue("font-size", 34, 22);
+    @media (max-width: $mobile) {
+      letter-spacing: -0.5px;
+    }
+  }
+  // .benefits-contractor__text
+  &__text {
+    font-size: toRem(18);
+    line-height: math.div(28, 18);
+    color: $gray;
+    margin-bottom: toRem(34);
+    flex-grow: 1;
+  }
+  // .benefits-contractor__button
+  &__button {
+    font-size: toRem(22);
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 16px;
+    letter-spacing: -0.5px;
+    transition: color 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $red;
+      }
+    }
+    &::before {
+      width: toRem(28);
+      height: toRem(28);
+      background: $red;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: toRem(14);
+    }
+  }
+}
+//========================================================================================================================================================
+
+.contact-us {
+  padding-top: toRem(266);
+  padding-bottom: toRem(170);
+  position: relative;
+  @media (max-width: toEm($containerWidth)) {
+    padding-top: toRem(200);
+    padding-bottom: toRem(0);
+  }
+  @media (max-width: $tablet) {
+    padding-top: toRem(140);
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+    @media (max-width: toEm($containerWidth)) {
+      display: none;
+    }
+  }
+  // .contact-us__container
+  &__container {
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    box-shadow: 31.297px 13.285px 24px 0px rgba(0, 0, 0, 0.22);
+    @media (max-width: toEm($containerWidth)) {
+      box-shadow: none;
+    }
+  }
+  // .contact-us__form
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 100px 184px;
+    @include adaptiveValue("padding-left", 100, 20, 0, $containerWidth, 991.98);
+    @include adaptiveValue(
+      "padding-right",
+      100,
+      20,
+      0,
+      $containerWidth,
+      991.98
+    );
+    @media (max-width: $mobile) {
+      padding: 60px 0px 100px;
+    }
+  }
+  // .contact-us__form-title
+  &__form-title {
+    line-height: math.div(80, 65);
+    max-width: toRem(700);
+    letter-spacing: -1px;
+    margin-bottom: toRem(40);
+    @include adaptiveValue("font-size", 65, 44);
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(20);
+    }
+  }
+  // .contact-us__form-desc
+  &__form-desc {
+    font-size: toRem(22);
+    line-height: math.div(35, 22);
+    color: $gray;
+    max-width: toRem(840);
+    margin-bottom: toRem(80);
+    @media (max-width: $mobile) {
+      font-size: toRem(18);
+      margin-bottom: toRem(40);
+    }
+  }
+  // .contact-us__form-options
+  &__form-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 20px;
+    margin-bottom: toRem(104);
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: toRem(60);
+    }
+  }
+  // .contact-us__form-option
+  &__form-option {
+    border: 3px solid $gray;
+    border-radius: 27px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 60px 76px;
+    transition: border 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    @include adaptiveValue("padding-left", 60, 20, 0, $containerWidth, 991.98);
+    @include adaptiveValue("padding-right", 60, 20, 0, $containerWidth, 991.98);
+    @media (max-width: $mobile) {
+      padding: 30px 24px 40px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        border: 3px solid $red;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -100%;
+      left: 50%;
+      transform: translate(-50%, 0) rotate(45deg);
+      background: $red;
+      width: 50px;
+      height: 50px;
+      transition: bottom 0.3s;
+    }
+  }
+  // .contact-us__form-option-icon
+  &__form-option-icon {
+    margin-bottom: toRem(26);
+    @include adaptiveValue("font-size", 100, 70);
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(16);
+    }
+  }
+  // .contact-us__form-option-title
+  &__form-option-title {
+    line-height: math.div(34, 28);
+    flex-grow: 1;
+    color: $gray;
+    @include adaptiveValue("font-size", 28, 20);
+  }
+  // .contact-us__form-option-selected
+  &__form-option-selected {
+    border: 3px solid $red;
+    .contact-us__form-option-icon {
+      color: $red;
+    }
+    .contact-us__form-option-title {
+      color: $mainColor;
+    }
+    &::after {
+      content: "";
+
+      bottom: -36px;
+    }
+  }
+  // .contact-us__form-wrap
+  &__form-wrap {
+    max-width: 880px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: toRem(50);
+  }
+  // .contact-us__form-input
+  &__form-input {
+    font-size: toRem(20);
+    line-height: math.div(24, 20);
+    color: $mainColor;
+    border: 1px solid rgba(172, 172, 172, 0.55);
+    border-radius: 27px;
+    outline: none;
+    padding: 30px 40px;
+    resize: none;
+    @media (max-width: $mobile) {
+      font-size: toRem(18);
+      padding: 24px;
+    }
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  // .contact-us__form-row
+  &__form-row {
+    display: flex;
+    gap: 24px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  // .contact-us__form-checkbox
+  &__form-checkbox {
+    max-width: 880px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: toRem(60);
+
+    input {
+      display: none;
+    }
+
+    label {
+      position: relative;
+      padding-left: 54px;
+      font-size: toRem(17);
+      line-height: math.div(24, 17);
+      color: $gray;
+      cursor: pointer;
+      text-align: left;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border: 2px solid $gray;
+        border-radius: 50%;
+        background: #fff;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 50%;
+        transform: translateY(-50%) scale(0);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: $gray;
+        transition: transform 0.3s;
+      }
+    }
+
+    input:checked + label::after {
+      transform: translateY(-50%) scale(1);
+    }
+  }
+  // .contact-us__form-button
+  &__form-button {
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+      justify-content: center;
+    }
   }
 }

@@ -14,20 +14,26 @@
   }
 }
 
+._icon-engineer:before {
+  content: "\e903";
+}
+._icon-delete-email:before {
+  content: "\e904";
+}
+._icon-feedback:before {
+  content: "\e905";
+}
+._icon-estimate:before {
+  content: "\e902";
+}
+._icon-arrow-right:before {
+  content: "\e901";
+}
 ._icon-check-double:before {
   content: "\e900";
 }
-._icon-star:before {
-  content: "\f005";
-}
-._icon-star-o:before {
-  content: "\f006";
-}
 ._icon-map-marker:before {
   content: "\f041";
-}
-._icon-arrow-right:before {
-  content: "\f061";
 }
 ._icon-phone:before {
   content: "\f095";

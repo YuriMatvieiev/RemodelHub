@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Contact page" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page contact-page">
+        <section class="contact-us">
+          <img src="@img/home/hero-bg.png" class="contact-us__bg" alt="Image" />
+          <div class="contact-us__container">
+            <form action="#" class="contact-us__form">
+              <div class="contact-us__form-title">
+                NEED HELP? Contact Remodel Hub.
+              </div>
+              <div class="contact-us__form-desc">
+                At RemodelHub, we connect homeowners with top-rated contractors
+                to bring your dream home projects to life.
+              </div>
+              <div class="contact-us__form-options">
+                <div class="contact-us__form-option">
+                  <div
+                    class="contact-us__form-option-icon _icon-estimate"
+                  ></div>
+                  <div class="contact-us__form-option-title">Cost Estimate</div>
+                </div>
+                <div
+                  class="contact-us__form-option contact-us__form-option-selected"
+                >
+                  <div
+                    class="contact-us__form-option-icon _icon-feedback"
+                  ></div>
+                  <div class="contact-us__form-option-title">
+                    General Inquiry / Feedback
+                  </div>
+                </div>
+                <div class="contact-us__form-option">
+                  <div
+                    class="contact-us__form-option-icon _icon-delete-email"
+                  ></div>
+                  <div class="contact-us__form-option-title">Unsubscribe</div>
+                </div>
+                <div class="contact-us__form-option">
+                  <div
+                    class="contact-us__form-option-icon _icon-engineer"
+                  ></div>
+                  <div class="contact-us__form-option-title">
+                    Contractor Inquiry
+                  </div>
+                </div>
+              </div>
+              <div class="contact-us__form-wrap">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Full Name..."
+                  class="contact-us__form-input"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address..."
+                  class="contact-us__form-input"
+                />
+                <div class="contact-us__form-row">
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="Phone Number..."
+                    class="contact-us__form-input"
+                  />
+                  <input
+                    type="text"
+                    name="address"
+                    id="address"
+                    placeholder="Address..."
+                    class="contact-us__form-input"
+                  />
+                </div>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="8"
+                  placeholder="Your Message..."
+                  class="contact-us__form-input"
+                ></textarea>
+              </div>
+              <div class="contact-us__form-checkbox">
+                <input type="checkbox" name="terms-check" id="terms-check" />
+                <label for="terms-check"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididun</label
+                >
+              </div>
+              <button type="submit" class="button-red contact-us__form-button">
+                Send now
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>
