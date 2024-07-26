@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240726191026">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240726192224">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,7 @@
 						<a href="#" class="button-red header__join _icon-briefcase">Join as a Pro
 						</a>
 					</div>
-					<button type="button" class="menu__icon icon-menu">
+					<button value="menu" type="button" class="menu__icon icon-menu">
 						<span></span>
 					</button>
 				</div>
@@ -66,7 +66,7 @@
 					</div>
 					<div class="hero__form">
 						<div class="hero__form-row">
-							<select name="project" class="hero__form-select" id="project">
+							<select aria-label="select" name="project" class="hero__form-select" id="project">
 								<option value="" disabled="disabled" selected="selected" hidden="">
 									Select project type
 								</option>
@@ -535,7 +535,7 @@
 					</div>
 					<div class="hero__form">
 						<div class="hero__form-row">
-							<select name="project" class="hero__form-select" id="project">
+							<select aria-label="select" name="project" class="hero__form-select" id="project">
 								<option value="" disabled="disabled" selected="selected" hidden="">
 									Select project type
 								</option>
@@ -634,14 +634,16 @@
 						<form class="footer__form-subscribe">
 							<input type="email" name="email" id="email" placeholder="&nbsp" />
 							<label for="email">Enter Email Address</label>
-							<button class="_icon-send"></button>
+							<button value="subscribe" class="_icon-send"></button>
 						</form>
 						<div class="footer__title">Social Media</div>
 						<ul class="footer__socials">
-							<li><a href="#" class="_icon-facebook"></a></li>
-							<li><a href="#" class="_icon-instagram"></a></li>
-							<li><a href="#" class="_icon-youtube"></a></li>
-							<li><a href="#" class="_icon-linkedin"></a></li>
+							<li><a href="#" aria-label="facebook" class="_icon-facebook"></a></li>
+							<li>
+								<a href="#" aria-label="instagram" class="_icon-instagram"></a>
+							</li>
+							<li><a href="#" aria-label="youtube" class="_icon-youtube"></a></li>
+							<li><a href="#" aria-label="linkedin" class="_icon-linkedin"></a></li>
 						</ul>
 					</div>
 				</div>
@@ -652,7 +654,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20240726191026"></script>
+	<script src="js/app.min.js?_v=20240726192224"></script>
 </body>
 
 </html>
